@@ -18,5 +18,4 @@ concepts and to allow you to get more familiar with talking to the API.
 1. An understanding of why the kubernetes API is so good
 1. An understanding of how the kubernetes API works
 1. How to interact with the kubernetes API via `kubectl`
-  1. How to create Deployments, Pods, Services, etc.
 1. How to interact with the kubernetes API via `client-go`

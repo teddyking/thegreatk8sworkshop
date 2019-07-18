@@ -10,9 +10,9 @@
 
 This workshop is split into 4 main parts, as follows:
 
-* [Part 1](/part1) - More Than Just a Scheduler
+* [Part 1 - More Than Just a Scheduler](/part1)
   * The k8s API - declarative, level-based, transparent, amazing
-* [Part 2](/part2) - Control Yourselves
+* [Part 2 - Control Yourselves](/part2)
   * Extending the k8s API via CRDs and custom controllers
 * Part 3 - An Unexpected Party
   * "Kubernetes-native" collaboration on the k8s API

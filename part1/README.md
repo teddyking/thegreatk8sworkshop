@@ -1,4 +1,4 @@
-# Part 1: More than just a scheduler
+# Part 1: More Than Just a Scheduler
 
 ## About
 

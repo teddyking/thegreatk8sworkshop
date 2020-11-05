@@ -11,7 +11,8 @@ tell it _what_ you want, not _how_ to do what you want. One great advantage to
 declarative APIs is that they allow you to store your declarations in version
 control systems, such as Git, thereby bringing all the benefits of version
 control (record of changes, rollback, code history, etc.) to the table. This
-pattern is sometimes referred to as GitOps.
+helps to support [GitOps](https://www.weave.works/technologies/gitops/)
+workflows.
 
 ### Level-based
 
@@ -42,9 +43,57 @@ controllers. This ease of extensibility is the driving force behind the
 "kubernetes-native" style of programming and system design that we are seeing
 evolve, and that we will be exploring throughout the remainder of this workshop.
 
+## Kubernetes-native
+
+The term "kubernetes-native" is a relatively new one, and as such is still open
+to interpretation. During this workshop we consider the term through two
+different lenses. The first lens considers kubernetes-native software from the
+perspective of a single developer or small team - how to write kubernetes-native
+software and what are the pros/cons of doing so? The second lens considers the
+bigger picture - the perspective and impact of kubernetes-native software to
+multiple teams or groups of people who are all working together. This is really
+where we see a lot of the real, true value of "kubernetes-native" software
+coming to light.
+
+With that in mind, let's try to define what we mean by kubernetes-native
+software. Kubernetes-native software can be thought of as:
+
+> Software that is written specifically to run on, and to take full advantage of
+> the kubernetes API
+
+There are lots of benefits to writing software like this. There's also one big
+drawback, which we'll touch on later, but let's start by discussing the good
+things.
+
+First and foremost is that by choosing to build on top of the kubernetes API,
+you can rely on it to provide a number of traditionally complex features for
+you, such as:
+
+* Storage of state - the kubernetes API is backed by an etcd datastore
+* High Availability - when deployed as part of a cluster of nodes, the
+  kubernetes API is highly available
+* Extensibility - as discussed above, the kubernetes API is very easy to extend,
+  which makes it easy to improve
+* Consistent user experience - close integration with the kubernetes tooling
+  users already know and love
+
+These are things that would historically require a lot of thought and time to
+get right. Now, obviously there's no such thing as a free lunch, and
+consideration will still need to be given to each of these with regards to
+whatever piece of software you're building. However whit kubernetes-native
+software the bulk of the complexity is baked into the underlying API, leaving
+you time and energy to focus on the things you really care about.
+
+This idea is discussed and presented in more detail in, ["To Crd, or Not to Crd,
+That is the Question"](https://www.youtube.com/watch?v=xGafiZEX0YA).
+
+
+TODO
+
 ## Further Reading
 
 * Declarative vs imperative linkys
+* [GitOps](https://www.weave.works/technologies/gitops/)
 * Distributed systems declarative etc.
 * https://medium.com/@graemecolman/the-new-kubernetes-native-d19dd4ae75a0
 * https://developers.redhat.com/blog/2020/04/08/why-kubernetes-native-instead-of-cloud-native/

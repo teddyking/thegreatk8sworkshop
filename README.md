@@ -1,5 +1,7 @@
 # The Great K8s Workshop
 
+Current status: Work in progress, definitely not ready to be read or used yet.
+
 ## Goals
 
 * To demonstrate the value of building "kubernetes-native" systems on top of the kubernetes API
